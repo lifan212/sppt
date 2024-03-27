@@ -1,0 +1,17 @@
+syntax = "proto3";
+package sppt.sppt;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "sppt/sppt/params.proto";
+
+option go_package = "sppt/x/sppt/types";
+
+// GenesisState defines the sppt module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}

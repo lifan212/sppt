@@ -1,0 +1,15 @@
+syntax = "proto3";
+package sppt.sppt;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "sppt/x/sppt/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "sppt/x/sppt/Params";
+  option (gogoproto.equal) = true;
+
+  
+}
